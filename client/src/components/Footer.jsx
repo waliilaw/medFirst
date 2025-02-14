@@ -127,13 +127,7 @@ const Footer = () => {
   // };
 
   return (
-    <footer className={`${
-      dark === 'dark'
-        ? 'bg-gradient-to-r from-gray-700 via-gray-900 to-black text-gray-100'
-        : 'bg-gradient-to-r from-[#b6dbfc] via-[#8faed9] to-[#b6dbfc] p-8 text-white shadow-lg shadow-black'
-    } `}
->
-    
+    <footer className={`bg-white text-black`}>
       <div className="container mx-auto">
         {/* Newsletter Subscription Section */}
         <div className="text-center md:col-span-2 lg:col-span-4 my-4">
@@ -148,7 +142,7 @@ const Footer = () => {
             />
             <button
               onClick={handleSubscribe}
-              className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded w-full max-w-[150px]"
+              className="bg-green-600 hover:bg-green-700 text-white p-2 rounded w-full max-w-[150px]"
             >
               Subscribe
             </button>
@@ -161,7 +155,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-wrap justify-between space-x-4">
-          {/* Med Space Section */}
+          {/* Med Fast Section */}
           <div className="space-y-4 w-full md:w-auto">
             <Link
               to="/"
@@ -172,12 +166,12 @@ const Footer = () => {
                 className="h-10 w-10 transition-transform duration-300 group-hover:rotate-6"
                 alt="AgroTech AI Logo"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#1f2937] to-[#b6dbfc] bg-clip-text text-transparent group-hover:from-[#133859] group-hover:to-[#b6dbfc] transition-all duration-300">
-                Med Space
+              <span className="text-2xl font-bold text-black">
+                Med Fast
               </span>
             </Link>
-            <p className="text-sm leading-relaxed max-w-xs">
-              The Med Space platform simplifies hospital management with
+            <p className="text-sm leading-relaxed max-w-xs text-black">
+              The Med Fast platform simplifies hospital management with
               efficient queuing models, lab test, OPDs, and inventory management
               for medicines and consumables.
             </p>
@@ -185,9 +179,7 @@ const Footer = () => {
 
           {/* About Section */}
           <div className="space-y-4 w-full md:w-auto">
-            <h3 className="text-lg font-semibold mb-4 relative inline-block after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#b6dbfc] after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">
-              About
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">About</h3>
             <ul className="space-y-2">
               {aboutLinks.map((link) => (
                 <li key={link.name}>
@@ -195,11 +187,11 @@ const Footer = () => {
                     <span className="mr-2 transition-transform duration-300 group-hover:translate-x-1">
                       ›
                     </span>
-                    <span className="relative overflow-hidden">
+                    <span className="relative overflow-hidden text-black">
                       <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">
                         {link.name}
                       </span>
-                      <span className="absolute top-0 left-0 inline-block transition-transform duration-300 translate-y-full group-hover:translate-y-0 text-[#1f2937]">
+                      <span className="absolute top-0 left-0 inline-block transition-transform duration-300 translate-y-full group-hover:translate-y-0 text-black">
                         {link.name}
                       </span>
                     </span>
@@ -211,9 +203,7 @@ const Footer = () => {
 
           {/* Services Section */}
           <div className="space-y-4 w-full md:w-auto">
-            <h3 className="text-lg font-semibold mb-4 relative inline-block after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#b6dbfc] after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">
-              Services
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {servicesLinks.map((link) => (
                 <li key={link.name}>
@@ -221,11 +211,11 @@ const Footer = () => {
                     <span className="mr-2 transition-transform duration-300 group-hover:translate-x-1">
                       ›
                     </span>
-                    <span className="relative overflow-hidden">
+                    <span className="relative overflow-hidden text-black">
                       <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">
                         {link.name}
                       </span>
-                      <span className="absolute top-0 left-0 inline-block transition-transform duration-300 translate-y-full group-hover:translate-y-0 text-[#1f2937]">
+                      <span className="absolute top-0 left-0 inline-block transition-transform duration-300 translate-y-full group-hover:translate-y-0 text-black">
                         {link.name}
                       </span>
                     </span>
@@ -237,9 +227,7 @@ const Footer = () => {
 
           {/* Contact Us Section */}
           <div className="space-y-4 w-full md:w-auto">
-            <h3 className="text-lg font-semibold mb-4 relative inline-block after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#b6dbfc] after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">
-              Contact Us
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2">
               {contactUsLinks.map((item) => (
                 <li key={item.name}>
@@ -247,11 +235,11 @@ const Footer = () => {
                     <span className="mr-2 transition-transform duration-300 group-hover:translate-x-1">
                       ›
                     </span>
-                    <span className="relative overflow-hidden">
+                    <span className="relative overflow-hidden text-black">
                       <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">
                         {item.name}
                       </span>
-                      <span className="absolute top-0 left-0 inline-block transition-transform duration-300 translate-y-full group-hover:translate-y-0 text-[#1f2937]">
+                      <span className="absolute top-0 left-0 inline-block transition-transform duration-300 translate-y-full group-hover:translate-y-0 text-black">
                         {item.name}
                       </span>
                     </span>
@@ -263,9 +251,7 @@ const Footer = () => {
 
           {/* Follow Us Section */}
           <div className="space-y-4 w-full md:w-auto">
-            <h3 className="text-lg font-semibold mb-4 relative inline-block after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#b6dbfc] after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">
-              Follow us on
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Follow us on</h3>
             <div className="flex space-x-4 mb-6">
               {socialMedia.map(({ Icon, link, color }, index) => (
                 <a
@@ -308,32 +294,27 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-[#b6dbfc]/30 text-center">
-          <p className="font-bold bg-gradient-to-r from-[#b6dbfc] to-[#b6dbfc] bg-clip-text text-transparent group-hover:from-[#133859] group-hover:to-[#b6dbfc] transition-all duration-300">
+        <div className="mt-8 pt-8 border-t border-gray-300 text-center">
+          <p className="font-bold text-black">
             DISCLAIMER
           </p>
-          <p 
-          className={`${
-            dark === 'dark'
-              ? 'text-gray-300 text-sm md:text-base mt-2'
-              : 'text-gray-900 text-sm md:text-base mt-2'
-          } `}>
-            “The information provided on Med-Space is intended for general
+          <p className="text-black text-sm md:text-base mt-2">
+            “The information provided on Med-Fast is intended for general
             informational purposes only and should not be considered as medical
             advice, diagnosis, or treatment. Always seek the advice of a
             qualified healthcare provider for any medical condition or
-            treatment. Med-Space facilitates OPD appointment booking and
+            treatment. Med-Fast facilitates OPD appointment booking and
             hospital data sharing, but it does not endorse or guarantee the
             quality of services provided by healthcare providers.”
           </p>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-[#b6dbfc]/30 text-center">
+        <div className="mt-8 pt-8 border-t border-gray-300 text-center">
           <p className="flex items-center justify-center text-sm">
             <FaRegCopyright className="mx-1" /> {currentYear} All Rights
             Reserved
-            <span className="font-bold ml-2 bg-[#b6dbfc] text-[#1f2937] px-2 py-1 rounded transition-all duration-300 hover:bg-[#1f2937] hover:text-[#b6dbfc]">
-              Medi Connect
+            <span className="font-bold ml-2 bg-green-600 text-white px-2 py-1 rounded transition-all duration-300 hover:bg-green-700">
+              Medi Fast
             </span>
           </p>
         </div>
@@ -344,19 +325,19 @@ const Footer = () => {
           <Chatbot isOpen={isOpen} setIsOpen={setIsOpen} />
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="bg-blue-600 hover:shadow-inner:bg-blue-500 text-white p-3 rounded-full shadow-lg  transition-colors"
+            className="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-colors"
           >
             {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
           </button>
           <button
             onClick={scrollToTop}
-            className={` bg-blue-600 hover:shadow-inner:bg-blue-500 text-white p-3 md:p-4 rounded-full z-[1000] transition-all ${!showScrollTop && 'opacity-0 invisible'}`}
+            className={`bg-green-600 hover:bg-green-700 text-white p-3 md:p-4 rounded-full z-[1000] transition-all ${!showScrollTop && 'opacity-0 invisible'}`}
           >
             <FaArrowUp size={24} />
           </button>
         </div>
       </div>
-    </footer >
+    </footer>
   );
 };
 
