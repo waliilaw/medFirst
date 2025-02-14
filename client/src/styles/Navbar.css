@@ -1,0 +1,125 @@
+/* src/styles/Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  background-color: lightgoldenrodyellow;
+  background-color: #333; /* Change to your desired color */
+  padding: 10px 20px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo-image {
+  max-height: 150px;
+  max-width: 200px;
+}
+.navbar-logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: whitesmoke; /* Subtle blue accent */
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s ease-in;
+}
+
+.tab:hover {
+  text-decoration: underline;
+}
+
+.navbar-menu-icon {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 25px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-menu-icon {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    background-color: #333; /* Match navbar background */
+    flex-direction: column;
+    align-items: center;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .navbar-links a {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 400px) {
+    .login-btn,.register-btn{
+      padding: 4px 30px !important;
+    }
+}
